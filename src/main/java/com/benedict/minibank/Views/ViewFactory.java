@@ -18,10 +18,12 @@ public class ViewFactory {
     private AnchorPane transactionsView;
     private AnchorPane accountsView;
 
+    private AnchorPane clientsView;
+
     //Admin views
     private final ObjectProperty<AdminMenuOptions> adminSelectedMenuItem;
     private AnchorPane createClientView;
-    private AnchorPane clientsView;
+    //private AnchorPane clientsView;
     private AnchorPane depositView;
 
 
@@ -56,8 +58,8 @@ public class ViewFactory {
         return dashboardView;
     }
 
-    public AnchorPane getTransactionsView(){
-        if(transactionsView == null){
+    public AnchorPane getTransactionsView(){ //getClientsView CHANGE
+        if(transactionsView == null){ //clientsView
             try{
                 transactionsView = new FXMLLoader(getClass().getResource("/Fxml/Client/Transactions.fxml")).load();
             }
@@ -66,7 +68,7 @@ public class ViewFactory {
             }
         }
 
-        return transactionsView;
+        return transactionsView; //clientsView
     }
 
 

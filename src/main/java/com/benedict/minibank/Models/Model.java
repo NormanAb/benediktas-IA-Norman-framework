@@ -57,8 +57,6 @@ public class Model {
      }
 
     public void checkClientCredentials(String pAddress, String password){
-        CheckingAccount checkingAccount;
-        SavingsAccount savingsAccount;
         ResultSet resultSet = databaseDriver.getClientData(pAddress, password);
         try{
             if(resultSet != null && resultSet.isBeforeFirst()){
